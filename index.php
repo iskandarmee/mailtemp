@@ -223,13 +223,7 @@
     <strong>Copyright &copy; 2018
   </footer>
 
-<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- InputMask -->
-<script src="plugins/input-mask/jquery.inputmask.js"></script>
-<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
-<script src="vendor/select2/dist/js/select2.min.js"></script>
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -246,6 +240,14 @@
 <!-- AdminLTE for demo purposes -->
 <script src="jquery-2.1.4.min.js"></script>
 <script src="select2-master/dist/js/select2.min.js"></script>
+
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- InputMask -->
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+<script src="vendor/select2/dist/js/select2.min.js"></script>
         <script>
             $(document).ready(function () {
                 $("#kota").select2({
