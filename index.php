@@ -28,11 +28,11 @@
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
   <link rel="stylesheet" href=" dist/css/skins/_all-skins.min.css">
- 
+
   <link rel="stylesheet" href="select2-master/dist/css/select2.min.css"/>
 
-  <link rel="stylesheet" href=plugins/timepicker/bootstrap-timepicker.min.css">
-  
+  <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+
   <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
 
 
@@ -47,7 +47,7 @@
           <span class="logo-lg"><img src="dist/img/ybp1.png" align="center" class="float-center"></span>
           <span class="logo-mini"><img src="dist/img/ybp1.png" align="center" class="float-center" width="100%"></span>
         </a>
-      
+
         <nav class="navbar navbar-static-top">
            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
@@ -59,7 +59,7 @@
       <aside class="main-sidebar">
 
          <section class="sidebar">
- 
+
             <form action="#" method="get" class="sidebar-form">
                <div class="input-group">
                   <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -69,14 +69,14 @@
                     </span>
               </div>
             </form>
-     
+
            <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
              <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Beranda</span>
                 <span class="pull-right-container">
-                </span> 
+                </span>
                   <li class="treeview">
                      <a href="#">
                 <span>Berita</span>
@@ -90,16 +90,16 @@
              <span>Data Pelanggan</span>
           </a>
         </li>
-         
+
         <li class="treeview">
           <a href="#">
             <span>Kontak</span>
           </a>
-        </li> 
+        </li>
       </section>
     </aside>
 
-  
+
   <div class="content-wrapper">
     <section class="content">
       <div class="row">
@@ -137,7 +137,7 @@
                         <div class="input-group-addon">
                             <i class="fa fa-calendar"></i>
                         </div>
-                     <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                     <input id="datamask" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                     </div>
                </div>
 
@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label ">Email</label>
+                  <label>Email</label>
                   <input type="email" class="form-control"  placeholder="Email">
                 </div>
 
@@ -161,14 +161,14 @@
                   <input type="file" id="exampleInputFile">
                 </div>
               </div>
-              
+
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
-          
+
         </div>
         <div class="col-xs-12">
           <div class="box">
@@ -189,7 +189,7 @@
                 </tr>
                 </thead>
                 <tbody>
-               
+
                 <tr>
                   <td>Mukti Wibowo</td>
                   <td>Jalan Hj. Nipan</td>
@@ -206,15 +206,15 @@
                 </tr>
                 </tbody>
                 <tfoot>
-            
+
                 </tfoot>
               </table>
             </div>
-          </div>           
+          </div>
         </div>
       </div>
     </section>
-  </div> 
+  </div>
 </div>
 
   <footer align="center">
@@ -224,24 +224,25 @@
   </footer>
 
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- InputMask -->
 <script src="plugins/input-mask/jquery.inputmask.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 <script src="vendor/select2/dist/js/select2.min.js"></script>
 <!-- jQuery 3 -->
-<script src=" bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src=" bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- DataTables -->
-<script src=" bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src=" bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src=" bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src=" bower_components/fastclick/lib/fastclick.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src=" dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="jquery-2.1.4.min.js"></script>
 <script src="select2-master/dist/js/select2.min.js"></script>
@@ -257,15 +258,9 @@
   $(function () {
 
     $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : true
-    })
+
     $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    $('[data-mask]').inputmask()
   })
 </script>
 
